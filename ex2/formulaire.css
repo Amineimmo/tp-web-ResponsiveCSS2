@@ -1,0 +1,282 @@
+.ajout {
+    min-height: 80vh;
+}
+
+.badge_titre {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 4px;
+    animation: floatY 3.5s ease-in-out infinite;
+    filter: drop-shadow(0 10px 14px rgba(79, 70, 229, 0.35));
+}
+
+.badge_titre svg {
+    width: 100%;
+    height: 100%;
+}
+
+.formulaire {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px 30px;
+    width: 100%;
+    max-width: 920px;
+    padding: 44px;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-top: 6px solid var(--indigo);
+    border-radius: 24px;
+    box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12);
+    animation: monte 0.9s ease both;
+}
+
+.champ {
+    display: flex;
+    flex-direction: column;
+}
+
+.pleine {
+    grid-column: 1 / -1;
+}
+
+.champ label {
+    margin-bottom: 8px;
+    font-family: var(--font-titre);
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.etoile {
+    color: #DC2626;
+}
+
+.champ input,
+.champ select,
+.champ textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: #F8FAFC;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    font-family: var(--font-titre);
+    font-size: 1rem;
+    color: var(--navy);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.champ textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.champ input::placeholder,
+.champ textarea::placeholder {
+    color: #94A3B8;
+}
+
+.champ input:hover,
+.champ select:hover,
+.champ textarea:hover {
+    border-color: #A5B4FC;
+}
+
+.champ input:valid,
+.champ select:valid,
+.champ textarea:valid {
+    border-color: #10B981;
+    background-color: #F0FDF4;
+}
+
+.champ input[type="text"]:invalid:not(:placeholder-shown),
+.champ input[type="email"]:invalid:not(:placeholder-shown),
+.champ input[type="number"]:invalid:not(:placeholder-shown),
+.champ textarea:invalid:not(:placeholder-shown) {
+    border-color: #DC2626;
+    background-color: #FEF2F2;
+}
+
+.champ input:focus,
+.champ select:focus,
+.champ textarea:focus {
+    outline: none;
+    border-color: var(--indigo);
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.18);
+}
+
+.champ input:invalid:focus,
+.champ select:invalid:focus,
+.champ textarea:invalid:focus {
+    border-color: #DC2626;
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.15);
+}
+
+.aide {
+    margin-top: 7px;
+    font-family: var(--font-titre);
+    font-size: 0.8rem;
+    color: var(--gris-clair);
+}
+
+.erreur {
+    display: none;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background-color: #FEF2F2;
+    border-left: 4px solid #DC2626;
+    border-radius: 6px;
+    font-family: var(--font-titre);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #B91C1C;
+}
+
+.champ input[type="text"]:invalid:not(:placeholder-shown) ~ .erreur,
+.champ input[type="email"]:invalid:not(:placeholder-shown) ~ .erreur,
+.champ input[type="number"]:invalid:not(:placeholder-shown) ~ .erreur,
+.champ textarea:invalid:not(:placeholder-shown) ~ .erreur,
+.champ input:invalid:focus ~ .erreur,
+.champ select:invalid:focus ~ .erreur,
+.champ textarea:invalid:focus ~ .erreur {
+    display: block;
+    animation: secoue 0.4s ease;
+}
+
+.zone_message {
+    padding: 14px 18px;
+    background-color: #EEF2FF;
+    border-left: 5px solid var(--indigo);
+    border-radius: 10px;
+    font-family: var(--font-texte);
+    font-size: 0.85rem;
+    color: #3730A3;
+}
+
+.msg_ok {
+    display: none;
+}
+
+.formulaire:valid .zone_message {
+    background-color: #ECFDF5;
+    border-left-color: #10B981;
+    color: #047857;
+}
+
+.formulaire:valid .msg_attente {
+    display: none;
+}
+
+.formulaire:valid .msg_ok {
+    display: block;
+    animation: monte 0.5s ease both;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.actions button {
+    position: relative;
+    overflow: hidden;
+    min-width: 170px;
+    min-height: 50px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-family: var(--font-titre);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.btn_annuler {
+    background-color: transparent;
+    border: 2px solid #CBD5E1;
+    color: var(--gris);
+}
+
+.btn_annuler:hover {
+    background-color: #F1F5F9;
+    border-color: var(--navy);
+    color: var(--navy);
+    transform: translateY(-2px);
+}
+
+.btn_enregistrer {
+    background: linear-gradient(135deg, #4F46E5, #0EA5E9);
+    border: 2px solid transparent;
+    color: #FFFFFF;
+    box-shadow: 0 10px 22px rgba(79, 70, 229, 0.3);
+}
+
+.btn_enregistrer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: skewX(-20deg);
+}
+
+.btn_enregistrer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 30px rgba(14, 165, 233, 0.4);
+}
+
+.btn_enregistrer:hover::before {
+    animation: reflet 0.8s ease;
+}
+
+.formulaire:valid .btn_enregistrer {
+    animation: pulse 2.2s ease-in-out infinite;
+}
+
+.actions button:active {
+    transform: scale(0.97);
+}
+
+@keyframes secoue {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    50% { transform: translateX(6px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+@media (max-width: 1024px) {
+    .formulaire {
+        max-width: 760px;
+        padding: 36px 30px;
+        gap: 24px 22px;
+    }
+}
+
+@media (max-width: 640px) {
+    .formulaire {
+        grid-template-columns: 1fr;
+        padding: 26px 18px;
+        gap: 20px;
+        border-radius: 18px;
+    }
+
+    .badge_titre {
+        width: 60px;
+        height: 60px;
+    }
+
+    .actions {
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+
+    .actions button {
+        width: 100%;
+        min-height: 54px;
+    }
+}

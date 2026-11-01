@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormaPlus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logoimg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+                    <path d="M 22 52 C 22 52 35 60 50 60 C 65 60 78 52 78 52 L 78 68 C 78 77 65 83 50 83 C 35 83 22 77 22 68 Z" fill="#818CF8" />
+                    <polygon points="50,22 90,44 50,60 10,44" fill="#818CF8" />
+                    <path d="M 75 49 L 79 49 L 81 67" stroke="#7C7EE8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                    <circle cx="81.5" cy="71.5" r="4.5" fill="#818CF8" />
+                </svg>
+            </div>
+            <h1>Forma<span class="titgradient">Plus<span class="plusgrad">+</span></span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../ex1/index.html#accueil">Accueil</a></li>
+                <li><a href="../ex1/index.html#formations">Formations</a></li>
+                <li><a href="../ex1/index.html#contact">Contact</a></li>
+                <li><a href="../ex2/ajouter.html">Ajouter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="accueil" id="accueil">
+            <svg class="bg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                    <linearGradient id="fondHero" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#EEF2FF"/>
+                        <stop offset="1" stop-color="#E0F2FE"/>
+                    </linearGradient>
+                    <filter id="flou" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="40"/>
+                    </filter>
+                </defs>
+                <rect width="1200" height="600" fill="url(#fondHero)"/>
+                <g filter="url(#flou)">
+                    <circle class="blob blob1" cx="250" cy="180" r="170" fill="#818CF8"/>
+                    <circle class="blob blob2" cx="950" cy="160" r="150" fill="#38BDF8"/>
+                    <circle class="blob blob3" cx="700" cy="480" r="160" fill="#6EE7B7"/>
+                </g>
+                <circle class="anneau" cx="1050" cy="460" r="46" fill="none" stroke="#4F46E5" stroke-width="3" stroke-dasharray="8 10"/>
+                <circle class="anneau anneau2" cx="130" cy="470" r="30" fill="none" stroke="#0EA5E9" stroke-width="3" stroke-dasharray="6 8"/>
+            </svg>
+            <h1>Bienvenue sur <span class="formaplusgradient">FormaPlus</span></h1>
+            <p>Votre plateforme de formation en ligne pour développer vos compétences.</p>
+            <a href="#formations" class="btn-hero">Voir nos formations</a>
+        </section>
+
+        <section class="formations" id="formations">
+            <svg class="bg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                    <pattern id="points" width="32" height="32" patternUnits="userSpaceOnUse">
+                        <circle cx="3" cy="3" r="2" fill="#CBD5E1"/>
+                    </pattern>
+                    <linearGradient id="fondForm" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#F8FAFC"/>
+                        <stop offset="1" stop-color="#EEF2FF"/>
+                    </linearGradient>
+                </defs>
+                <rect width="1200" height="800" fill="url(#fondForm)"/>
+                <rect class="grille" width="1200" height="800" fill="url(#points)"/>
+                <rect class="forme forme1" x="90" y="120" width="70" height="70" rx="18" fill="#C7D2FE"/>
+                <circle class="forme forme2" cx="1090" cy="260" r="40" fill="#BAE6FD"/>
+                <polygon class="forme forme3" points="1020,700 1070,780 970,780" fill="#A7F3D0"/>
+                <circle class="forme forme4" cx="120" cy="640" r="26" fill="none" stroke="#818CF8" stroke-width="4"/>
+            </svg>
+            <h2 class="maintitle">Nos formations</h2>
+            <p class="intro">Explorez nos différentes formations pour développer vos compétences.</p>
+
+            <div class="les_articles">
+                <article class="article1">
+                    <div class="logo_lang">
+                        <div class="badge_logo">
+                            <svg class="lang_svg" viewBox="0 0 64 64" aria-hidden="true">
+                                <path class="vapeur" d="M26 6c-4 5 4 8 0 14M37 4c-4 6 4 9 0 16" fill="none" stroke="#EA2D2E" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M14 28h32v12c0 8-6 14-16 14s-16-6-16-14z" fill="#5382A1"/>
+                                <path d="M46 31h5a6 6 0 0 1 0 12h-5" fill="none" stroke="#5382A1" stroke-width="4"/>
+                                <path d="M12 59h36" stroke="#EA2D2E" stroke-width="4" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h2>Développement Java</h2>
+                    </div>
+                    <p><span class="type backend">Backend</span></p>
+                    <p>Apprenez à développer des applications Java</p>
+                    <div class="infos">
+                        <span class="duree">30h</span>
+                        <span class="niveau">Intermédiaire</span>
+                    </div>
+                    <a href="#formations" class="btn-formation">Voir la formation</a>
+                </article>
+
+                <article class="article2">
+                    <div class="logo_lang">
+                        <div class="badge_logo">
+                            <svg class="lang_svg" viewBox="0 0 64 64" aria-hidden="true">
+                                <path d="M10 6h44l-4 44-18 8-18-8z" fill="#E44D26"/>
+                                <path d="M32 10v44l14-6 3.5-38z" fill="#F16529"/>
+                                <text x="32" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF" font-family="monospace">&lt;/&gt;</text>
+                            </svg>
+                        </div>
+                        <h2>HTML/CSS</h2>
+                    </div>
+                    <p><span class="type frontend">Frontend</span></p>
+                    <p>Apprenez à créer des pages web avec HTML et CSS</p>
+                    <div class="infos">
+                        <span class="duree">18h</span>
+                        <span class="niveau">Débutant</span>
+                    </div>
+                    <a href="#formations" class="btn-formation">Voir la formation</a>
+                </article>
+
+                <article class="article3">
+                    <div class="logo_lang">
+                        <div class="badge_logo">
+                            <svg class="lang_svg" viewBox="0 0 64 64" aria-hidden="true">
+                                <path d="M32 4l24 8-4 32-20 14-20-14-4-32z" fill="#DD0031"/>
+                                <path d="M32 4v54l20-14 4-32z" fill="#C3002F"/>
+                                <text x="32" y="42" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF" font-family="sans-serif">A</text>
+                            </svg>
+                        </div>
+                        <h2>Angular</h2>
+                    </div>
+                    <p><span class="type frontend">Frontend</span></p>
+                    <p>Apprenez à créer des applications web avec Angular</p>
+                    <div class="infos">
+                        <span class="duree">24h</span>
+                        <span class="niveau">Intermédiaire</span>
+                    </div>
+                    <a href="#formations" class="btn-formation">Voir la formation</a>
+                </article>
+
+                <article class="article4">
+                    <div class="logo_lang">
+                        <div class="badge_logo">
+                            <svg class="lang_svg" viewBox="0 0 64 64" aria-hidden="true">
+                                <rect x="8" y="8" width="32" height="32" rx="12" fill="#3776AB"/>
+                                <rect x="24" y="24" width="32" height="32" rx="12" fill="#FFD43B"/>
+                                <circle cx="19" cy="19" r="3" fill="#FFFFFF"/>
+                                <circle cx="45" cy="45" r="3" fill="#3776AB"/>
+                            </svg>
+                        </div>
+                        <h2>Python</h2>
+                    </div>
+                    <p><span class="type prog">Programmation</span></p>
+                    <p>Apprenez à programmer en Python</p>
+                    <div class="infos">
+                        <span class="duree">20h</span>
+                        <span class="niveau">Débutant</span>
+                    </div>
+                    <a href="#formations" class="btn-formation">Voir la formation</a>
+                </article>
+
+                <article class="article5">
+                    <div class="logo_lang">
+                        <div class="badge_logo">
+                            <svg class="lang_svg" viewBox="0 0 64 64" aria-hidden="true">
+                                <circle cx="32" cy="32" r="28" fill="#6DB33F"/>
+                                <path d="M44 16c-14 0-22 8-22 20 0 4 1 8 4 10 2-8 8-12 18-14-8 4-12 8-14 16 12 0 20-12 14-32z" fill="#FFFFFF"/>
+                            </svg>
+                        </div>
+                        <h2>Spring Boot</h2>
+                    </div>
+                    <p><span class="type backend">Backend</span></p>
+                    <p>Apprenez à créer des applications web avec Spring Boot</p>
+                    <div class="infos">
+                        <span class="duree">25h</span>
+                        <span class="niveau">Avancé</span>
+                    </div>
+                    <a href="#formations" class="btn-formation">Voir la formation</a>
+                </article>
+
+                <article class="article6">
+                    <div class="logo_lang">
+                        <div class="badge_logo">
+                            <svg class="lang_svg" viewBox="0 0 64 64" aria-hidden="true">
+                                <ellipse cx="32" cy="14" rx="20" ry="8" fill="#818CF8"/>
+                                <path d="M12 14v36c0 4.5 9 8 20 8s20-3.5 20-8V14c0 4.5-9 8-20 8s-20-3.5-20-8z" fill="#4F46E5"/>
+                                <path d="M12 30c0 4.5 9 8 20 8s20-3.5 20-8M12 42c0 4.5 9 8 20 8s20-3.5 20-8" fill="none" stroke="#C7D2FE" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h2>Bases de données SQL</h2>
+                    </div>
+                    <p><span class="type bdd">Base de données</span></p>
+                    <p>Apprenez à gérer les bases de données SQL</p>
+                    <div class="infos">
+                        <span class="duree">16h</span>
+                        <span class="niveau">Débutant</span>
+                    </div>
+                    <a href="#formations" class="btn-formation">Voir la formation</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <svg class="bg" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+                <linearGradient id="fondPied" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#0F172A"/>
+                    <stop offset="1" stop-color="#1E1B4B"/>
+                </linearGradient>
+            </defs>
+            <rect width="1200" height="240" fill="url(#fondPied)"/>
+            <path class="vague vague1" d="M0 120 Q150 70 300 120 T600 120 T900 120 T1200 120 T1500 120 T1800 120 T2100 120 T2400 120 V240 H0 Z" fill="#4F46E5" opacity="0.35"/>
+            <path class="vague vague2" d="M0 160 Q150 120 300 160 T600 160 T900 160 T1200 160 T1500 160 T1800 160 T2100 160 T2400 160 V240 H0 Z" fill="#0EA5E9" opacity="0.3"/>
+        </svg>
+        <p>&copy; 2027 FormaPlus. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

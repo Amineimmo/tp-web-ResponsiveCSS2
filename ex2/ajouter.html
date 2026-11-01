@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une formation - FormaPlus</title>
+    <link rel="stylesheet" href="../ex1/style.css">
+   <link rel="stylesheet" href="formulaire.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logoimg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+                    <path d="M 22 52 C 22 52 35 60 50 60 C 65 60 78 52 78 52 L 78 68 C 78 77 65 83 50 83 C 35 83 22 77 22 68 Z" fill="#818CF8" />
+                    <polygon points="50,22 90,44 50,60 10,44" fill="#818CF8" />
+                    <path d="M 75 49 L 79 49 L 81 67" stroke="#7C7EE8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                    <circle cx="81.5" cy="71.5" r="4.5" fill="#818CF8" />
+                </svg>
+            </div>
+            <h1>Forma<span class="titgradient">Plus<span class="plusgrad">+</span></span></h1>
+        </div>
+        <nav>
+            <ul>
+               <li><a href="../ex1/index.html#accueil">Accueil</a></li>
+                <li><a href="../ex1/index.html#formations">Formations</a></li>
+                <li><a href="../ex2/ajouter.html">Ajouter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formations ajout" id="ajout">
+            <svg class="bg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                    <linearGradient id="fondAjout" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#EEF2FF"/>
+                        <stop offset="0.5" stop-color="#F8FAFC"/>
+                        <stop offset="1" stop-color="#E0F2FE"/>
+                    </linearGradient>
+                    <pattern id="lignes" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M0 40L40 0" stroke="#C7D2FE" stroke-width="1"/>
+                    </pattern>
+                    <filter id="flou2" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="45"/>
+                    </filter>
+                </defs>
+                <rect width="1200" height="900" fill="url(#fondAjout)"/>
+                <rect width="1200" height="900" fill="url(#lignes)" opacity="0.6"/>
+                <g filter="url(#flou2)">
+                    <circle class="blob blob1" cx="180" cy="200" r="150" fill="#A5B4FC"/>
+                    <circle class="blob blob2" cx="1030" cy="700" r="170" fill="#7DD3FC"/>
+                    <circle class="blob blob3" cx="1050" cy="150" r="110" fill="#A7F3D0"/>
+                </g>
+                <rect class="forme forme1" x="70" y="700" width="60" height="60" rx="16" fill="none" stroke="#818CF8" stroke-width="4"/>
+                <circle class="forme forme4" cx="1100" cy="440" r="24" fill="none" stroke="#0EA5E9" stroke-width="4"/>
+            </svg>
+
+            <div class="badge_titre">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <circle cx="32" cy="32" r="28" fill="#4F46E5"/>
+                    <path d="M32 18v28M18 32h28" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h2 class="maintitle">Ajouter une formation</h2>
+            <p class="intro">Remplissez le formulaire pour publier une nouvelle formation dans le catalogue.</p>
+
+            <form class="formulaire" action="#" method="post">
+                <div class="champ">
+                    <label for="intitule">Intitulé de la formation <span class="etoile">*</span></label>
+                    <input type="text" id="intitule" name="intitule" placeholder="Ex : Développement Java" required minlength="5" maxlength="80" aria-describedby="aide-intitule">
+                    <small class="aide" id="aide-intitule">Saisir entre 5 et 80 caractères</small>
+                    <span class="erreur">L'intitulé doit contenir entre 5 et 80 caractères</span>
+                </div>
+
+                <div class="champ">
+                    <label for="categorie">Catégorie <span class="etoile">*</span></label>
+                    <select id="categorie" name="categorie" required>
+                        <option value="" selected disabled>Choisir une catégorie</option>
+                        <option value="backend">Backend</option>
+                        <option value="frontend">Frontend</option>
+                        <option value="programmation">Programmation</option>
+                        <option value="data">Data</option>
+                    </select>
+                    <span class="erreur">Veuillez choisir une catégorie</span>
+                </div>
+
+                <div class="champ">
+                    <label for="duree">Durée en heures <span class="etoile">*</span></label>
+                    <input type="number" id="duree" name="duree" placeholder="Ex : 30" required min="1" max="500" aria-describedby="aide-duree">
+                    <small class="aide" id="aide-duree">Saisir une valeur entre 1 et 500 heures</small>
+                    <span class="erreur">La durée doit être comprise entre 1 et 500 heures</span>
+                </div>
+
+                <div class="champ">
+                    <label for="niveau">Niveau</label>
+                    <select id="niveau" name="niveau">
+                        <option value="debutant">Débutant</option>
+                        <option value="intermediaire">Intermédiaire</option>
+                        <option value="avance">Avancé</option>
+                    </select>
+                </div>
+
+                <div class="champ">
+                    <label for="email">Adresse e-mail du formateur <span class="etoile">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="formateur@exemple.com" required>
+                    <span class="erreur">Veuillez saisir une adresse e-mail valide</span>
+                </div>
+
+                <div class="champ">
+                    <label for="date">Date de début <span class="etoile">*</span></label>
+                    <input type="date" id="date" name="date" required>
+                    <span class="erreur">Veuillez choisir une date de début</span>
+                </div>
+
+                <div class="champ pleine">
+                    <label for="description">Description <span class="etoile">*</span></label>
+                    <textarea id="description" name="description" rows="5" placeholder="Décrivez la formation en quelques phrases" required aria-describedby="aide-description"></textarea>
+                    <small class="aide" id="aide-description">Expliquez ce que les participants vont apprendre</small>
+                    <span class="erreur">Veuillez saisir une description</span>
+                </div>
+
+                <div class="zone_message pleine">
+                    <p class="msg_attente">Les champs marqués d'une étoile sont obligatoires.</p>
+                    <p class="msg_ok">Tout est correct, vous pouvez enregistrer la formation.</p>
+                </div>
+
+                <div class="actions pleine">
+                    <button type="reset" class="btn_annuler">Annuler</button>
+                    <button type="submit" class="btn_enregistrer">Enregistrer</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <svg class="bg" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+                <linearGradient id="fondPied" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#0F172A"/>
+                    <stop offset="1" stop-color="#1E1B4B"/>
+                </linearGradient>
+            </defs>
+            <rect width="1200" height="240" fill="url(#fondPied)"/>
+            <path class="vague vague1" d="M0 120 Q150 70 300 120 T600 120 T900 120 T1200 120 T1500 120 T1800 120 T2100 120 T2400 120 V240 H0 Z" fill="#4F46E5" opacity="0.35"/>
+            <path class="vague vague2" d="M0 160 Q150 120 300 160 T600 160 T900 160 T1200 160 T1500 160 T1800 160 T2100 160 T2400 160 V240 H0 Z" fill="#0EA5E9" opacity="0.3"/>
+        </svg>
+        <p>&copy; 2027 FormaPlus. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
